@@ -1,0 +1,21 @@
+.wrapper {
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+}
+
+.header-wrapper {
+	display: flex;
+	flex-direction: row;
+}
+
+.body-wrapper {
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+}
+
+.footer-wrapper {
+	display: flex;
+	flex-direction: row;
+}
