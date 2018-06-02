@@ -5,7 +5,8 @@
 
 :root {
     overflow-x: hidden;
-    height: 100%
+    height: 100%;
+    --main-color:hsl(233, 30%, 50%);
 }
 
 @font-face {
@@ -43,7 +44,12 @@ h2 {
   font-family: 'Sporting Grotesque', 'Courier New', Courier, monospace;
   font-size: 60px;
   color: hsla(0, 0%, 0%, 0%);
-  -webkit-text-stroke: 2px hsl(233, 30%, 50%);
+  -webkit-text-stroke: 2px var(--main-color);
+}
+
+h2:hover {
+  cursor: pointer;
+  text-decoration: wavy underline var(--main-color);
 }
 
 .intro--container {
