@@ -68,6 +68,10 @@ p {
     align-self: center;
 }
 
+.intro__text--nostyle {
+  -webkit-text-stroke: none;
+}
+
   .intro__bg {
     grid-column: 3 / 6;
     grid-row: 1;
