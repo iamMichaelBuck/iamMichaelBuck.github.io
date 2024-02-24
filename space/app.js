@@ -24,10 +24,11 @@ function updateContent(acceleration) {
     var contentDiv = document.getElementById("content");
     
     // Threshold for z-axis acceleration
-    var threshold = 1;
+    var thresholdHigh = 1;
+    var thresholdLow = -1;
     
     // Check if the acceleration along the z-axis is below the threshold
-    if (acceleration < threshold) {
+    if (acceleration < thresholdHigh || acceleration > thresholdLow) {
         contentDiv.textContent = "Below threshold content";
         contentDiv.style.backgroundColor = "red";
     } else {
