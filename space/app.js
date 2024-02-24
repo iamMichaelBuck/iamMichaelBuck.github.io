@@ -28,7 +28,7 @@ function updateContent(acceleration) {
     var thresholdLow = -1;
     
     // Check if the acceleration along the z-axis is below the threshold
-    if (acceleration < thresholdHigh || acceleration > thresholdLow) {
+    if (acceleration < thresholdHigh || acceleration <= thresholdLow) {
         contentDiv.textContent = "Below threshold content";
         contentDiv.style.backgroundColor = "red";
     } else {
