@@ -41,8 +41,8 @@ function updateContent(acceleration) {
 window.addEventListener('devicemotion', function(event) {
     // Get the z-axis acceleration
     var accelerationZ = event.acceleration.z;
-    var accelerationY = event.acceleration.y;
-    var accelerationZ = event.acceleration.z;
+    // var accelerationY = event.acceleration.y;
+    // var accelerationX = event.acceleration.x;
 
     
     // Call the function to update the content of the div
