@@ -17,7 +17,7 @@
 //   }
 // }
 const maxValues = 50; // Number of values to track
-let accelerationZArray = []; // array of z acceleration data
+let accelerationZArray = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]; // array of z acceleration data
 let average;
 let sum;
 
@@ -27,8 +27,8 @@ function updateContent(acceleration) {
     var contentDiv = document.getElementById("content");
     
     // Threshold for z-axis acceleration
-    var thresholdHigh = 1;
-    var thresholdLow = -1;
+    var thresholdHigh = 2;
+    var thresholdLow = -2;
     
     // Check if the acceleration along the z-axis is below the threshold
     if (acceleration < thresholdHigh && acceleration > thresholdLow) {
