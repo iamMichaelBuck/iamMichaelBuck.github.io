@@ -16,7 +16,7 @@
 //     valuesArray.shift(); // Remove the oldest value
 //   }
 // }
-const maxValues = 20; // Number of values to track
+const maxValues = 50; // Number of values to track
 let accelerationZArray = []; // array of z acceleration data
 let average;
 let sum;
