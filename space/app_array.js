@@ -24,9 +24,9 @@ let sum;
 // sleep function from https://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep
 // also i'm not getting it to work properly
 
-// function sleep(ms) {
-//     return new Promise(resolve => setTimeout(resolve, ms));
-// }
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 // Gemini code to track acceleration
 // Function to update the content of the div based on the z-axis acceleration
@@ -43,10 +43,10 @@ async function updateContent(acceleration) {
         contentDiv.textContent = "Planet Earth";
         bodyDiv.style.backgroundColor = "black";
     } else {
-        contentDiv.textContent = "???????????";
+        contentDiv.textContent = "????????";
         bodyDiv.style.backgroundColor = "red";
-        // 
-        // await sleep(1000);
+        // async wait function execution
+        await sleep(3000);
     }
 }
 
