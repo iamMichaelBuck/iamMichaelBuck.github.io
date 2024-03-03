@@ -47,6 +47,8 @@ async function updateContent(acceleration) {
         bodyDiv.style.backgroundColor = "red";
         // async wait function execution
         await sleep(5000);
+        contentDiv.textContent = "Planet Earth";
+        bodyDiv.style.backgroundColor = "black";
     }
 }
 
