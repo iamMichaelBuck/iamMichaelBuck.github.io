@@ -1,21 +1,5 @@
 // Gemini code to create array and values for it
-// let myVariable = 0; // Your variable that will change values
-// const maxValues = 20; // Number of values to track
-// const valuesArray = []; // Array to store the values
 
-
-// function updateValueAndArray() {
-//   // Update the variable with a new value (replace with your actual logic)
-//   myVariable = myVariable + 1; // Example: incrementing by 1
-
-//   // Add the new value to the array
-//   valuesArray.push(myVariable);
-
-//   // Keep the array length at maxValues
-//   if (valuesArray.length > maxValues) {
-//     valuesArray.shift(); // Remove the oldest value
-//   }
-// }
 const maxValues = 50; // Number of values to track
 let accelerationZArray = []; // array of z acceleration data
 let average;
@@ -75,3 +59,12 @@ window.addEventListener('devicemotion', function (event) {
 console.log(average);
 // averageing value Example usage:
 // setInterval(updateValueAndArray, 1000); // Update every second (example)
+
+
+var svgContainer = document.getElementById('svgContainer');
+var animItem = bodymovin.loadAnimation({
+    wrapper: svgContainer,
+    animType: 'svg',
+    loop: true,
+    path: 'planet.json'
+});
