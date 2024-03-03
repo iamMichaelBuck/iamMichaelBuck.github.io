@@ -12,11 +12,26 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
 
     <title>SPACE</title>
+
+    <style>
+        @font-face {
+            font-family: 'SpaceGrotesk';
+            /* font-stretch: PERCENTAGE_RANGE_LOW_TO_HIGH;  */
+            /* Note that font-stretch is a % of normal width */
+            font-style: normal;
+            /* See note below */
+            font-weight: 300 700;
+            src: url(Typography/SpaceGrotesk[wght].woff2) format('woff2');
+        }
+    </style>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div id="content">lol</div>
+    <div id="content">
+        <p></p>You are currently on
+        <div id="planet">Planet Earth</div>
+    </div>
     <script src="app_array.js"></script>
 </body>
 

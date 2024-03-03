@@ -24,7 +24,8 @@ let sum;
 // Gemini code to track acceleration
 // Function to update the content of the div based on the z-axis acceleration
 function updateContent(acceleration) {
-    var contentDiv = document.getElementById("content");
+    var contentDiv = document.getElementById("planet");
+    var bodyDiv = document.getElementsByTagName("BODY")[0];;
 
     // Threshold for z-axis acceleration
     var thresholdHigh = 1.8;
@@ -32,11 +33,12 @@ function updateContent(acceleration) {
 
     // Check if the acceleration along the z-axis is below the threshold
     if (acceleration < thresholdHigh && acceleration > thresholdLow) {
-        contentDiv.textContent = "Below threshold content";
-        contentDiv.style.backgroundColor = "red";
+        contentDiv.textContent = "Planet Earth";
+        bodyDiv.style.backgroundColor = "black";
     } else {
-        contentDiv.textContent = "Above threshold content";
-        contentDiv.style.backgroundColor = "green";
+        contentDiv.textContent = "???????????";
+        bodyDiv.style.backgroundColor = "red";
+        setTimeout(3000);
     }
 }
 
