@@ -22,6 +22,10 @@ body {
 
 .infocard {}
 
+.planets {
+    display: flex;
+}
+
 #planet {
     font-size: 3rem;
 }
@@ -29,4 +33,15 @@ body {
 #planetContainer {
     max-width: 100px;
     max-height: 62px;
+}
+
+#planetRotation {
+    max-width: 100px;
+    max-height: 62px;
+}
+
+#planetRotationSlow {
+    max-width: 100px;
+    max-height: 62px;
+    margin-left: 20px;
 }

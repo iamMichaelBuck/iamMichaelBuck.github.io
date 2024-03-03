@@ -62,10 +62,24 @@ console.log(average);
 // setInterval(updateValueAndArray, 1000); // Update every second (example)
 
 
-var svgContainer = document.getElementById('svgContainer');
-var animItem = bodymovin.loadAnimation({
+let svgContainer = document.getElementById('planetContainer');
+let planetWrong = bodymovin.loadAnimation({
     wrapper: planetContainer,
     animType: 'svg',
     loop: true,
     path: 'planet_transparent.json'
+});
+
+let planetFast = bodymovin.loadAnimation({
+    wrapper: planetRotation,
+    animType: 'svg',
+    loop: true,
+    path: 'planet_turn.json'
+});
+
+let planetSlow = bodymovin.loadAnimation({
+    wrapper: planetRotationSlow,
+    animType: 'svg',
+    loop: true,
+    path: 'planet_turn_slow.json'
 });
