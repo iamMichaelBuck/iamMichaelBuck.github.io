@@ -20,9 +20,7 @@ body {
     color: white;
 }
 
-.infocard {
-    grid-row-end: 5;
-}
+.infocard {}
 
 #planet {
     font-size: 3rem;
@@ -31,7 +29,4 @@ body {
 #planetContainer {
     max-width: 100px;
     max-height: 62px;
-    grid-column-start: 5;
-    justify-self: end;
-
 }
