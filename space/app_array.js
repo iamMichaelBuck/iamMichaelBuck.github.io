@@ -22,9 +22,11 @@ let average;
 let sum;
 
 // sleep function from https://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
+// also i'm not getting it to work properly
+
+// function sleep(ms) {
+//     return new Promise(resolve => setTimeout(resolve, ms));
+// }
 
 // Gemini code to track acceleration
 // Function to update the content of the div based on the z-axis acceleration
@@ -43,7 +45,8 @@ async function updateContent(acceleration) {
     } else {
         contentDiv.textContent = "???????????";
         bodyDiv.style.backgroundColor = "red";
-        await sleep(1000);
+        // 
+        // await sleep(1000);
     }
 }
 
@@ -51,7 +54,6 @@ async function updateContent(acceleration) {
 window.addEventListener('devicemotion', function (event) {
     // Get the z-axis acceleration
     var accelerationZ = event.acceleration.z;
-
     accelerationZArray.push(accelerationZ);
     console.log(accelerationZ);
     if (accelerationZArray.length > maxValues) {
