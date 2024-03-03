@@ -21,6 +21,11 @@ let accelerationZArray = []; // array of z acceleration data
 let average;
 let sum;
 
+// sleep function from https://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 // Gemini code to track acceleration
 // Function to update the content of the div based on the z-axis acceleration
 async function updateContent(acceleration) {
@@ -38,7 +43,7 @@ async function updateContent(acceleration) {
     } else {
         contentDiv.textContent = "???????????";
         bodyDiv.style.backgroundColor = "red";
-        await new Promise(r => setTimeout(r, 2000));
+        await sleep(1000);
     }
 }
 
