@@ -38,7 +38,7 @@ function updateContent(acceleration) {
     } else {
         contentDiv.textContent = "???????????";
         bodyDiv.style.backgroundColor = "red";
-        setTimeout(3000);
+        await new Promise(r => setTimeout(r, 2000));
     }
 }
 
