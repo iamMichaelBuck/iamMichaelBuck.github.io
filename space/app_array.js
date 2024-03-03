@@ -17,7 +17,7 @@
 //   }
 // }
 const maxValues = 50; // Number of values to track
-let accelerationZArray = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]; // array of z acceleration data
+let accelerationZArray = []; // array of z acceleration data
 let average;
 let sum;
 
@@ -25,11 +25,11 @@ let sum;
 // Function to update the content of the div based on the z-axis acceleration
 function updateContent(acceleration) {
     var contentDiv = document.getElementById("content");
-    
+
     // Threshold for z-axis acceleration
-    var thresholdHigh = 2;
-    var thresholdLow = -2;
-    
+    var thresholdHigh = 1.8;
+    var thresholdLow = -1.8;
+
     // Check if the acceleration along the z-axis is below the threshold
     if (acceleration < thresholdHigh && acceleration > thresholdLow) {
         contentDiv.textContent = "Below threshold content";
@@ -41,18 +41,18 @@ function updateContent(acceleration) {
 }
 
 // Event listener for the devicemotion event
-window.addEventListener('devicemotion', function(event) {
+window.addEventListener('devicemotion', function (event) {
     // Get the z-axis acceleration
     var accelerationZ = event.acceleration.z;
-  
+
     accelerationZArray.push(accelerationZ);
     console.log(accelerationZ);
     if (accelerationZArray.length > maxValues) {
-    accelerationZArray.shift(); // Remove the oldest value
-    let sum = accelerationZArray.reduce((acc, value) => acc + value, 0);
-    average = sum / accelerationZArray.length;
-  }
-     
+        accelerationZArray.shift(); // Remove the oldest value
+        let sum = accelerationZArray.reduce((acc, value) => acc + value, 0);
+        average = sum / accelerationZArray.length;
+    }
+
     // Call the function to update the content of the div
     updateContent(average);
 });
