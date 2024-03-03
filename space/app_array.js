@@ -15,12 +15,12 @@ let sum;
 // Gemini code to track acceleration
 // Function to update the content of the div based on the z-axis acceleration
 async function updateContent(acceleration) {
-    var contentDiv = document.getElementById("planet");
-    var bodyDiv = document.getElementsByTagName("BODY")[0];;
+    const contentDiv = document.getElementById("planet");
+    const bodyDiv = document.getElementsByTagName("BODY")[0];;
 
     // Threshold for z-axis acceleration
-    var thresholdHigh = 1.8;
-    var thresholdLow = -1.8;
+    const thresholdHigh = 1.8;
+    const thresholdLow = -1.8;
 
     // Check if the acceleration along the z-axis is below the threshold
     if (acceleration < thresholdHigh && acceleration > thresholdLow) {
@@ -51,9 +51,10 @@ window.addEventListener('devicemotion', function (event) {
         // taking the average of the array by dividing it by its length
         average = sum / accelerationZArray.length;
     }
+    // Call the function to update the content of the div
+    updateContent(average);
 });
-// Call the function to update the content of the div
-updateContent(average);
+
 
 
 console.log(average);
@@ -63,7 +64,7 @@ console.log(average);
 
 var svgContainer = document.getElementById('svgContainer');
 var animItem = bodymovin.loadAnimation({
-    wrapper: svgContainer,
+    wrapper: planetContainer,
     animType: 'svg',
     loop: true,
     path: 'planet_transparent.json'
