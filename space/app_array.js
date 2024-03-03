@@ -46,7 +46,7 @@ async function updateContent(acceleration) {
         contentDiv.textContent = "????????";
         bodyDiv.style.backgroundColor = "red";
         // async wait function execution
-        await sleep(3000);
+        await sleep(5000);
     }
 }
 

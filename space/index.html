@@ -14,6 +14,55 @@
     <title>SPACE</title>
 
     <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        * {
+            margin: 0;
+        }
+
+        body {
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img,
+        picture,
+        video,
+        canvas,
+        svg {
+            display: block;
+            max-width: 100%;
+        }
+
+
+        input,
+        button,
+        textarea,
+        select {
+            font: inherit;
+        }
+
+
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            overflow-wrap: break-word;
+        }
+
+
+        #root,
+        #__next {
+            isolation: isolate;
+        }
+
         @font-face {
             font-family: 'SpaceGrotesk';
             /* font-stretch: PERCENTAGE_RANGE_LOW_TO_HIGH;  */
@@ -29,8 +78,15 @@
 
 <body>
     <div id="content">
+        <!-- big planet -->
         <video width="200" height="124" autoplay loop muted>
             <source src="planet.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- small planet -->
+        <video width="100" height="62" autoplay loop muted>
+            <source src="planet_small.mp4" type="video/mp4" />
             Your browser does not support the video tag.
         </video>
         <p>You are currently on</p>
