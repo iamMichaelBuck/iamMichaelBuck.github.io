@@ -23,7 +23,7 @@ let sum;
 
 // Gemini code to track acceleration
 // Function to update the content of the div based on the z-axis acceleration
-function updateContent(acceleration) {
+async function updateContent(acceleration) {
     var contentDiv = document.getElementById("planet");
     var bodyDiv = document.getElementsByTagName("BODY")[0];;
 
