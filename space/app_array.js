@@ -29,12 +29,9 @@ async function updateContent(acceleration) {
     } else {
         contentDiv.textContent = "????????";
         bodyDiv.style.backgroundColor = "red";
-
         await new Promise(resolve => setTimeout(resolve, 3000));
-
         // async wait function execution from stackoverflow
         // await sleep(5000);
-
         contentDiv.textContent = "Planet Earth";
         bodyDiv.style.backgroundColor = "black";
     }
@@ -46,15 +43,18 @@ window.addEventListener('devicemotion', function (event) {
     var accelerationZ = event.acceleration.z;
     accelerationZArray.push(accelerationZ);
     console.log(accelerationZ);
+    // check if array has more than defined max values
     if (accelerationZArray.length > maxValues) {
         accelerationZArray.shift(); // Remove the oldest value
+        // adding the sum of the array togehter
         let sum = accelerationZArray.reduce((acc, value) => acc + value, 0);
+        // taking the average of the array by dividing it by its length
         average = sum / accelerationZArray.length;
     }
-
-    // Call the function to update the content of the div
-    updateContent(average);
 });
+// Call the function to update the content of the div
+updateContent(average);
+
 
 console.log(average);
 // averageing value Example usage:
@@ -66,5 +66,5 @@ var animItem = bodymovin.loadAnimation({
     wrapper: svgContainer,
     animType: 'svg',
     loop: true,
-    path: 'planet.json'
+    path: 'planet_transparent.json'
 });
