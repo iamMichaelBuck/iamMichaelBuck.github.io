@@ -39,12 +39,10 @@ async function updateContent(acceleration) {
 
 // Event listener for the devicemotion event
 window.addEventListener('devicemotion', function (event) {
-    // Get the z-axis acceleration (positive and negative)
-    let accelerationZ = event.acceleration.z;
-    // turn acceleration value into posiutive value if it's negative
-    // this should hopefully fix the very abrupt changes in state
-    let accelerationPositive = Math.abs(accelerationZ);
-    accelerationZArray.push(accelerationPositive);
+    // Get the z-axis acceleration
+    var accelerationZ = event.acceleration.z;
+    accelerationZArray.push(accelerationZ);
+    console.log(accelerationZ);
     // check if array has more than defined max values
     if (accelerationZArray.length > maxValues) {
         accelerationZArray.shift(); // Remove the oldest value
