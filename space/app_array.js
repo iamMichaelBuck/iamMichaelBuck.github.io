@@ -86,7 +86,7 @@ let planetSlow = bodymovin.loadAnimation({
     path: 'planet_turn_slow.json'
 });
 
-let planetSlow = bodymovin.loadAnimation({
+let bars = bodymovin.loadAnimation({
     wrapper: bars,
     animType: 'svg',
     loop: true,
