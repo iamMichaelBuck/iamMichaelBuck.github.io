@@ -20,10 +20,9 @@ async function updateContent(acceleration) {
 
     // Threshold for z-axis acceleration
     const thresholdHigh = 1.8;
-    const thresholdLow = -1.8;
 
     // Check if the acceleration along the z-axis is below the threshold
-    if (acceleration < thresholdHigh && acceleration > thresholdLow) {
+    if (acceleration < thresholdHigh) {
         contentDiv.textContent = "Planet Earth";
         bodyDiv.style.backgroundColor = "black";
     } else {
@@ -43,8 +42,9 @@ window.addEventListener('devicemotion', function (event) {
     let accelerationZ = event.acceleration.z;
     // turn acceleration value into posiutive value if it's negative
     // this should hopefully fix the very abrupt changes in state
-    let accelerationPositive = Math.abs(accelerationZ);
-    accelerationZArray.push(accelerationPositive);
+    // trying to round the number to two decimal places
+    let accelerationRounded = parseFloat((Math.abs(accelerationZ)).toFixed(2));
+    accelerationZArray.push(accelerationRounded);
     // check if array has more than defined max values
     if (accelerationZArray.length > maxValues) {
         accelerationZArray.shift(); // Remove the oldest value
@@ -81,6 +81,13 @@ let planetFast = bodymovin.loadAnimation({
 
 let planetSlow = bodymovin.loadAnimation({
     wrapper: planetRotationSlow,
+    animType: 'svg',
+    loop: true,
+    path: 'planet_turn_slow.json'
+});
+
+let planetSlow = bodymovin.loadAnimation({
+    wrapper: bars,
     animType: 'svg',
     loop: true,
     path: 'planet_turn_slow.json'

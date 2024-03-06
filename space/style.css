@@ -45,3 +45,8 @@ body {
     max-height: 62px;
     margin-left: 20px;
 }
+
+#bars {
+    max-width: 90%;
+    max-height: 200px;
+}
