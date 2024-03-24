@@ -1,6 +1,7 @@
 // Gemini code to create array and values for it
 
 const maxValues = 50; // Number of values to track
+const thresholdHigh = 5; // treshhold for acceleration to trigger state change
 let accelerationZArray = []; // array of z acceleration data
 let average;
 let sum;
@@ -18,8 +19,9 @@ async function updateContent(acceleration) {
     const contentDiv = document.getElementById("planet");
     const bodyDiv = document.getElementsByTagName("BODY")[0];;
 
-    // Threshold for z-axis acceleration
-    const thresholdHigh = 1.8;
+    // turned local variable into global variable (see upstairs)
+    // // Threshold for z-axis acceleration
+    // const thresholdHigh = 5;
 
     // Check if the acceleration along the z-axis is below the threshold
     if (acceleration < thresholdHigh) {
@@ -72,30 +74,30 @@ let planetWrong = bodymovin.loadAnimation({
     path: 'planet_transparent.json'
 });
 
-let planetFast = bodymovin.loadAnimation({
-    wrapper: planetRotation,
-    animType: 'svg',
-    loop: true,
-    path: 'planet_turn.json'
-});
+// let planetFast = bodymovin.loadAnimation({
+//     wrapper: planetRotation,
+//     animType: 'svg',
+//     loop: true,
+//     path: 'planet_turn.json'
+// });
 
-let planetSlow = bodymovin.loadAnimation({
-    wrapper: planetRotationSlow,
-    animType: 'svg',
-    loop: true,
-    path: 'planet_turn_slow.json'
-});
+// let planetSlow = bodymovin.loadAnimation({
+//     wrapper: planetRotationSlow,
+//     animType: 'svg',
+//     loop: true,
+//     path: 'planet_turn_slow.json'
+// });
 
-let barsAnimation = bodymovin.loadAnimation({
-    wrapper: barsLeft,
-    animType: 'svg',
-    loop: true,
-    path: 'bars.json'
-});
+// let barsAnimation = bodymovin.loadAnimation({
+//     wrapper: barsLeft,
+//     animType: 'svg',
+//     loop: true,
+//     path: 'bars.json'
+// });
 
-let barsAnimationRight = bodymovin.loadAnimation({
-    wrapper: barsRight,
-    animType: 'svg',
-    loop: true,
-    path: 'bars.json'
-});
+// let barsAnimationRight = bodymovin.loadAnimation({
+//     wrapper: barsRight,
+//     animType: 'svg',
+//     loop: true,
+//     path: 'bars.json'
+// });

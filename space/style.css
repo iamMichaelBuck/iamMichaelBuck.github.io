@@ -22,7 +22,7 @@ body {
 }
 
 .infocard {
-    margin-top: 40%;
+    margin-top: 50%;
 }
 
 .planets {
@@ -39,6 +39,7 @@ body {
     max-height: 62px;
 }
 
+/* 
 #planetRotation {
     max-width: 100px;
     max-height: 62px;
@@ -65,4 +66,4 @@ body {
     max-height: 200px;
     bottom: 0;
     right: 0;
-}
+} */
