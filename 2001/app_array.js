@@ -1,5 +1,3 @@
-
-
 let svgContainer = document.getElementById('planetContainer');
 let planetWrong = bodymovin.loadAnimation({
     wrapper: planetContainer,
