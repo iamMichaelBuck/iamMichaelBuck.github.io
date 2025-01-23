@@ -28,7 +28,7 @@ h2 {
   font-size: 60px;
   /* font-size: 3rem; */
   color: rgba(0, 0, 0, 0);
-  -webkit-text-stroke: 2px hsl(233, 30%, 50%);
+  -webkit-text-stroke: 1px hsl(233, 30%, 50%);
   /* -webkit-text-stroke: 2px var(--main-color); */
   /* text-stroke: 2px var(--main-color); */
 }
